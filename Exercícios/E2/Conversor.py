@@ -1,13 +1,15 @@
 valor = int(input('Insira o valor que deseja converter: '))
 print('=====' * 10)
-print('[1] para binário')
-print('[2] para octal')
-print('[3] para hexadecimal')
-opcao = str(input('Selecione a opção desejada: '))
+
+print('''Escolha uma opção para conversão: 
+[1] para binário 
+[2] para octal 
+[3] para hexadecimal''')
+
+opcao = int(input('Sua opção é '))
 if opcao == 1:
-    sBin = str(bin(valor))
-    print(sBin)
+    print("{} resultado desse valor em binário é: {} ".format(valor, bin(valor)))
 elif opcao == 2:
-    sOct = str(oct(valor))
+    print("{} resultado desse valor em octal é: {} ".format(valor, oct(valor)))
 elif opcao == 3:
-    sHex = str(hex(valor))
+    print("{} resultado desse valor em hexadecimal é: {} ".format(valor, hex(valor)))
