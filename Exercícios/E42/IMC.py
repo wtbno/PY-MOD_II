@@ -11,5 +11,5 @@ elif 30 <= imc < 34.9:
     print('Seu IMC é {:.2f}, risco de obsidade grau I! ' .format(imc))
 elif 35 <= imc < 39.9:
     print('Seu IMC é {:.2f}, risco de obsidade grau II! ' .format(imc))
-else:
-    print('Seu IMC é {:.2f}, risco de obsidade grau III! ' .format(imc))
+# else:
+#     print('Seu IMC é {:.2f}, risco de obsidade grau III! ' .format(imc))
