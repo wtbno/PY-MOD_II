@@ -12,6 +12,7 @@ print('''Selecione uma das opções abaixo:
 jogador = int(input('Qual sua escolha? '))
 print('O computador escolheu {}' .format(itens[maquina]))
 print('A sua escolha foi {}' .format(itens[jogador]))
+# Sistema de estruturas aninhadas
 if maquina == 0:
     if jogador == 0:
         print('Empate')
