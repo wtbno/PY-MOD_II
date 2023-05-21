@@ -1,0 +1,6 @@
+ent = input('Digite algo ')
+print('O tipo primitivo é ', type(ent))
+print('O tipo primitivo tem espaços?', ent.isspace())
+print('O tipo primitivo é um número?', ent.isnumeric())
+print('O tipo primitivo é alfanumerico?', ent.isalnum())
+print('O tipo primitivo é um número decimal? ', ent.isdecimal())

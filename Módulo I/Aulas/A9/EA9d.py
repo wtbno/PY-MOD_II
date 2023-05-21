@@ -1,0 +1,5 @@
+nome = str(input('Insira seu nome: '))
+print(nome.find('Saraiva'))
+print(nome.count('a'))
+divido = nome.split()
+print(divido[0])
