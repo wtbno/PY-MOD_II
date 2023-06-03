@@ -20,4 +20,5 @@ while jogador != computador:
     sleep(1)
 
     tentativas = jogador
+    # Mostra o número de tentavias realizadas para advinhar
 print('Você ganhou, mas tentou {} vezes' .format(tentativas))
