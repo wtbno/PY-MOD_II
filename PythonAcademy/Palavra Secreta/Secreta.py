@@ -1,9 +1,10 @@
-
+import os
 palavraSecreta = 'tartaruga'
-asteristico = ''
-letrasCorretas = ''
 
+letrasCorretas = ''
+asteristico = ''
 tentativas = 0
+
 while True:
 
     letraDigitada = input(
@@ -25,4 +26,11 @@ while True:
     print('Palavra formada ', palavraFormada)
 
     if palavraFormada == palavraSecreta:
+        os.system('clear')
+        # Limpa o terminal
         print('Você acertou!')
+        print('A palavra era:', palavraFormada)
+        print('Tentativas:', tentativas)
+
+        palavraSecreta = 'tartaruga'
+        letrasCorretas = ''
