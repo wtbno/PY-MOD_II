@@ -20,7 +20,7 @@ while True:
         try:
             indice = int(indice_str)
             del lista[indice]
-            # Tratando erros
+            # Tratando erros caso a opção selecionada não seja um int ou não esteja no indice
         except ValueError:
             print('Selecione um número inteiro.')
         except IndexError:
