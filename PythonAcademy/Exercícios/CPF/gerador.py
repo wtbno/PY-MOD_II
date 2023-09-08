@@ -23,12 +23,28 @@ contrário disso:
 
 O primeiro dígito do CPF é 7
 """
+import re
+import sys
 
-cpf_enviado = '674.184.860-65' \
-    .replace('.', '')\
+# Encerra o código
+entrada = input('CPF [674.184.860-65] ')
+# Substituir tudo que não for um número com método re
+cpf_enviado = re.sub(
+    r'[^0-9]',
+    '',
+    entrada)
+
+entrada_seq = entrada == entrada[0] * len(entrada)
+
+if entrada_seq:
+    print('Você digitou dados sequenciais')
+    sys.exit()
+
+
+"""   .replace('.', '')\
     .replace('-', '')\
-    .replace(' ', '')
-
+    .replace(' ', '')"""
+# Substituir tudo que não for um número
 nove_digitos = cpf_enviado[:9]
 """
 Nesta linha, você está criando uma nova variável chamada nove_digitos. Você está usando a técnica de "slicing" para pegar os primeiros 9 caracteres da string cpf e atribuí-los a essa variável. Portanto, nove_digitos agora contém os primeiros nove dígitos do CPF, que são '005988001'.
@@ -36,8 +52,6 @@ Nesta linha, você está criando uma nova variável chamada nove_digitos. Você 
 Em Python, o termo "slicing" refere-se à técnica de extrair partes específicas de uma sequência, como uma string, lista ou tupla, criando uma nova sequência contendo os elementos desejados. O operador de slice em Python é o [:]. Ele permite que você especifique um intervalo de índices para extrair um subconjunto dos elementos da sequência original.
 """
 
-
-print(nove_digitos)
 
 # => realização da multiplicação regressiva
 
@@ -52,7 +66,7 @@ for digito1 in nove_digitos:
 
 digito1 = (resultadod1 * 10) % 11
 digito1 = digito1 if digito1 <= 9 else 0
-print(digito1)
+# print(digito1)
 
 
 dez_digitos = nove_digitos + str(digito1)
@@ -64,8 +78,8 @@ for digito2 in nove_digitos:
     regressivo2 -= 1
 digito2 = (resultadod2 * 10) % 11
 digito2 = digito2 if digito2 <= 9 else 0
-print(digito2)
-print(cpf_enviado)
+# print(digito2)
+# print(cpf_enviado)
 
 cpf_calculado = f'{nove_digitos}{digito1}{digito2}'
 
